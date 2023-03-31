@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // TODO: Add code to build the project using
+                './gradlew assemble'
+            }
+        }
+        stage('Test') {
+            steps {
+                // TODO: Add code to run tests using '
+                ./gradlew test'
+            }
+        }
+    }
+    
+    post {
+        // TODO: Add code to check if the build failed and notify the appropriate channels
+    }
+}
